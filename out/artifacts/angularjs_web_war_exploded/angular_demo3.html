@@ -5,13 +5,12 @@
     <title>Title</title>
     <script type="text/javascript" src="angularjs/angular.min.js"></script>
 </head>
-<body ng-init="msg='你好，chanjet'"><!--Angular 定义默认值-->
+<body ng-init="book={title:'JAVA核心技术',price:88.8}"><!--Angular 定义默认值-->
 <div>
-    <input type="text" id="msg" name="msg"  ng-model="msg">
+   <span>书名：{{book.title}}</span>
+    <span>价格：{{book.price}}</span>
 </div>
-<div>
-   <h1>{{msg}}</h1>
-</div>
+
 
 </body>
 </html>

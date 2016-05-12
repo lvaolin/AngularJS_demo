@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">  <!--引用下面定义的模块名称-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="angularjs/angular.min.js"></script>
+</head>
+<body ><!--Angular 定义默认值-->
+<div ng-controller="myController">
+
+    <table border="1">
+        <tr><td>书名</td><td>价格</td></tr>
+        <tr ng-repeat="temp in books|orderBy:'price'"><td>{{temp.title}}</td><td>{{temp.price}}</td></tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+  var app=angular.module("myApp",[]);//定义模块
+    app.controller("myController",function($scope){
+       var updateClock= function () {
+           $scope.books=[
+               {title:"JAVA核心技术第1季", price:88.98},
+               {title:"JAVA核心技术第2季", price:81.98},
+               {title:"JAVA核心技术第3季", price:90.98},
+               {title:"JAVA核心技术第4季", price:78.98},
+           ];
+
+       };
+
+      updateClock();
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">  <!--引用下面定义的模块名称-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="angularjs/angular.min.js"></script>
+</head>
+<body ><!--Angular 定义默认值-->
+<div ng-controller="myController">
+   <h1>书名：{{book.title}}</h1>
+    <h1>价格：{{book.price}}</h1>
+    <h1>{{getInfo()}}</h1>
+</div>
+
+<script type="text/javascript">
+  var app=angular.module("myApp",[]);//定义模块
+    app.controller("myController",function($scope){
+        $scope.book={
+            title:"JAVA核心技术",
+            price:88.98
+        };
+        $scope.getInfo=function(){
+            return "图书名称："+$scope.book.title+",价格："+$scope.book.price;
+        };
+    });
+
+</script>
+
+</body>
+</html>

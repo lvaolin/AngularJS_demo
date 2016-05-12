@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">  <!--引用下面定义的模块名称-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="angularjs/angular.min.js"></script>
+</head>
+<body ><!--Angular 定义默认值-->
+<div ng-controller="myController">
+    <h1>{{book}}</h1>
+    <h1>{{book|json|uppercase}}</h1>
+</div>
+
+<script type="text/javascript">
+  var app=angular.module("myApp",[]);//定义模块
+    app.controller("myController",function($scope){
+       var updateClock= function () {
+           $scope.book={
+               title:"Java核心技术",
+               price:88.98
+           };
+
+       };
+
+      updateClock();
+
+    });
+
+</script>
+
+</body>
+</html>
