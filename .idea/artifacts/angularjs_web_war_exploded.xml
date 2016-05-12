@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="angularjs_web" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-lib-2.3-jdk15" />
+        </element>
       </element>
     </root>
   </artifact>
